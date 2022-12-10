@@ -67,7 +67,8 @@ demo.py generates the following outputs:
 
 # Please Cite the Following paper when using 4D-FED-GNN++:
 
-@article{gurler2020, title={Federated Brain Graph Evolution Prediction using Decentralized Connectivity Datasets with Temporally-varying Acquisitions }, <br/>
+@article{gurler2022, <br/>
+title={Federated Brain Graph Evolution Prediction using Decentralized Connectivity Datasets with Temporally-varying Acquisitions }, <br/>
 author={Gurler Zeynep and Rekik Islem}, <br/>
 journal={IEEE Transactions on Medical Imaging},<br/>
 volume={}, <br/>
