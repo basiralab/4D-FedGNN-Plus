@@ -1,8 +1,6 @@
-#4D-FED-GNN++
-4D-FED-GNN++, a federated brain graph evolution trajectory prediction framework that 
-learns from brain connectivity data with missing timepoints, coded up in Python
-by Zeynep Gürler. Please contact 
-zeynepgurler1998@gmail.com for inquiries. Thanks.
+# 4D-FED-GNN++
+4D-FED-GNN++, a federated brain graph evolution trajectory prediction framework that learns from brain connectivity data with missing timepoints, coded up in Python
+by Zeynep Gürler. Please contact zeynepgurler1998@gmail.com for inquiries. Thanks.
  
 > **Federated Brain Graph Evolution Prediction using Decentralized Connectivity Datasets with Temporally-varying Acquisitions**
 > [Zeynep Gürler](https://github.com/zeynepgurler)<sup>1</sup>, [Islem Rekik](https://basira-lab.com/)<sup>1</sup>
@@ -66,20 +64,16 @@ demo.py generates the following outputs:
 
 ![gnn pipeline](outputs.png)
 
-# arXiv link 
-
-You can download our paper at: https://arxiv.org/abs/2009.11166
 
 # Please Cite the Following paper when using 4D-FED-GNN++:
 
-@article{gurler2020, title={ Foreseeing Brain Graph Evolution Over Time
-Using Deep Adversarial Network Normalizer}, <br/>
-author={Gurler Zeynep, Nebli Ahmed, Rekik Islem}, <br/>
-journal={Predictive Intelligence in Medicine International Society and Conference Series on Medical Image Computing and Computer-Assisted Intervention},
+@article{gurler2020, title={Federated Brain Graph Evolution Prediction using Decentralized Connectivity Datasets with Temporally-varying Acquisitions }, <br/>
+author={Gurler Zeynep and Rekik Islem}, <br/>
+journal={IEEE Transactions on Medical Imaging},<br/>
 volume={}, <br/>
 pages={}, <br/>
-year={2020}, <br/>
-publisher={Springer} <br/>
+year={2022}, <br/>
+publisher={IEEE} <br/>
 }<br/>
 
 
