@@ -291,24 +291,22 @@ def update_main_by_average(hospitals, t):
         This function takes the GNN-layer weights of the GNN at timepoint t and computes the global model by averaging,
         then broadcats the weights to the hospitals (updates each GNN with the global model)
     """
-    for i, hospital in enumerate(hospitals):
-        target_state_dict = copy.deepcopy(hospital.models[t - 1].state_dict())
-        model_list = []
-        for k, h in enumerate(hospitals):
-            if k != i:
-                model_list.append(h.models[t - 1])
+    target_state_dict = copy.deepcopy(hospitals[0].models[t - 1].state_dict())
+    mux = 1 / len(hospitals)
 
-        mux = 1 / (len(model_list) + 1)
-        for key in target_state_dict:
-            if target_state_dict[key].data.dtype == torch.float32:
-                target_state_dict[key].data = target_state_dict[key].data.clone() * mux
-                for model in model_list:
-                    state_dict = copy.deepcopy(model.state_dict())
-                    target_state_dict[key].data += mux * state_dict[key].data.clone()
+    model_state_dict_list = [copy.deepcopy(hospitals[i].models[t - 1].state_dict()) for i in range(1, len(hospitals))]
 
+    for key in target_state_dict:
+        if target_state_dict[key].data.dtype == torch.float32:
+            target_state_dict[key].data = target_state_dict[key].data.clone() * mux
+            for model_state_dict in model_state_dict_list:
+                target_state_dict[key].data += mux * model_state_dict[key].data.clone()
+
+    for i in range(len(hospitals)):
         hospitals[i].models[t - 1].load_state_dict(target_state_dict)
 
     return hospitals
+
 
 
 def train_one_epoch(args, hospital, train_data, fold, table, index):
