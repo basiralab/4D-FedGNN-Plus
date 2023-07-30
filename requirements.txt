@@ -1,0 +1,6 @@
+python==3.8.0
+torch==1.7.0
+torch_geometric
+scikit-learn
+matplotlib
+numpy
