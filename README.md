@@ -1,6 +1,6 @@
 # 4D-FED-GNN++
 4D-FED-GNN++, a federated brain graph evolution trajectory prediction framework that learns from brain connectivity data with missing timepoints, coded up in Python
-by Zeynep Gürler. Please contact zeynepgurler1998@gmail.com for inquiries. Thanks.
+by Zeynep Gürler and Pavel Bozmarov. Please contact zeynepgurler1998@gmail.com or pavel1818@gmail.com for inquiries. Thanks.
  
 > **Federated Brain Graph Evolution Prediction using Decentralized Connectivity Datasets with Temporally-varying Acquisitions**
 
@@ -31,19 +31,10 @@ More details can be found at: (link to the paper) and our research paper video o
 * [Python 3.8](https://www.python.org/)
 * [PyTorch 1.7.0](http://pytorch.org/)
 * [Torch-geometric](https://github.com/rusty1s/pytorch_geometric)
-* [Torch-sparse](https://github.com/rusty1s/pytorch_sparse)
-* [Torch-scatter](https://github.com/rusty1s/pytorch_scatter)
 * [Scikit-learn 0.23.0+](https://scikit-learn.org/stable/)
 * [Matplotlib 3.1.3+](https://matplotlib.org/)
 * [Numpy 1.20.1+](https://numpy.org/)
 
-# Demo
-
-4D-FED-GNN++ is coded in Python 3.8 on Windows 10. GPU is not needed to run the code.
-demo.py is the implementation of 4D-FED-GNN++ proposed
-by Federated Brain Graph Evolution Prediction using Decentralized Connectivity 
-Datasets with Temporally-varying Acquisitions paper. In this repo, we release the 4D-FED-GNN++ source code trained and tested on a simulated 
-data as shown below:
 
 **Data preparation**
 
@@ -62,13 +53,15 @@ demo.py and execute,
 python demo.py
 ```
 
-If you want to train on simulated dataset using 4D-GNN, 4D-FED-GNN, and 4D-FED-GNN+ techniques, 
+If you want to train on simulated dataset using 4D-GNN, 4D-FED-GNN+, 4D-FED-GNN++, or Weighted_weight_exchange techniques, 
 you can change the mode parameter in arg_parse function of demo.py
 
 demo.py generates the following outputs:
 
 ![gnn pipeline](outputs.png)
 
+# Suggested usage(Updated)
+Use main.ipynb as your main file to train models. There are several examples of various GNN architectures. The final(updated) training and validating functions are inside main.ipynb. 
 
 # Please Cite the Following paper when using 4D-FED-GNN++:
 
