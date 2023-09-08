@@ -60,8 +60,16 @@ demo.py generates the following outputs:
 
 ![gnn pipeline](outputs.png)
 
-# Suggested usage(Updated)
-Use main.ipynb as your main file to train models. There are several examples of various GNN architectures. The final(updated) training and validating functions are inside main.ipynb. 
+# New experiments
+We have worked on upgrading 4D-FED-GNN++. To achieve that we have
+worked on two areas of improvement:
+* **Custom federated strategy**. We have essentially devised new methods for stronger hospitals to transfer their weights to weaker ones. In addition, we have defined *strength* based not only on the availability of training data but also on the quality of the training samples and the performance of the models.
+* **Model Architecture**. We have utilised different GNN and CNN architectures. Although we are working with graph data, CNNs are well-known for capturing patterns in grid-like data structures which is the type of data we are working with (matrices).
+
+Our best GNN model utilised 
+
+
+Use main.ipynb as your main file to see in detail the architecture and usage of the aforementioned models.
 
 # Please Cite the Following paper when using 4D-FED-GNN++:
 
