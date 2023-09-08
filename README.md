@@ -66,7 +66,10 @@ worked on two areas of improvement:
 * **Custom federated strategy**. We have essentially devised new methods for stronger hospitals to transfer their weights to weaker ones. In addition, we have defined *strength* based not only on the availability of training data but also on the quality of the training samples and the performance of the models.
 * **Model Architecture**. We have utilised different GNN and CNN architectures. Although we are working with graph data, CNNs are well-known for capturing patterns in grid-like data structures which is the type of data we are working with (matrices).
 
-Our best GNN model utilised 
+Our best GNN model is called TAG++. It uses the same federated strategy as 4D-FED-GNN++ but we have altered the training architecture. It consists of TAGConv layers which allow incorporating information for more distant neighbours in the aggregation step. Our Best CNN-based model is named VGG19++ and utilised the VGG19 architecture and the agin the custom federated setting proposed by 4D-FED-GNN++. The results for all the main new experiments are presented as follows.
+<img width="749" alt="Screenshot 2023-09-08 at 12 59 30" src="https://github.com/basiralab/4D-FedGNN-Plus/assets/77898273/0012eb96-0310-475e-8fd7-5b3dbab45efe">
+
+
 
 
 Use main.ipynb as your main file to see in detail the architecture and usage of the aforementioned models.
